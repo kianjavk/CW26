@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Dentinations
+{% endblock %}
+
+{% block content %}
+
+      <div>
+          <h3>Name:</h3>
+          <span>{{destination.name}}</span>
+      </div>
+      <div>
+          <h3>Origin:</h3>
+          <span>{{destination.origin}}</span>
+      </div>
+      <div>
+          <h3>Destination:</h3>
+          <span>{{destination.destination}}</span>
+      </div>
+      <div>
+          <h3>description:</h3>
+          <p>{{destination.description}}</p>
+      </div>
+      <a href="{% url 'destination_edit' dest.id %}"> Edit</a>
+      <a href="{% url 'destination_delete' dest.id %}"> DELETE</a>
+
+      <hr>
+
+{% endblock %}

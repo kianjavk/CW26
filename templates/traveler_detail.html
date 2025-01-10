@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Traveler home
+{% endblock %}
+
+
+{% block content %}
+
+    <div>
+        <h3>first name:</h3>
+        <span>{{traveler.first_name}}</span>
+    </div>
+    <div>
+        <h3>last name:</h3>
+        <span>{{traveler.last_name}}</span>
+    </div>
+    <div>
+        <h3>national code:</h3>
+        <span>{{traveler.national_code}}</span>
+    </div>
+    <div>
+        <h3>gender:</h3>
+        <p>{{traveler.gender}}</p>
+    </div>
+    <a href="{% url 'traveler_edit' traveler.id %}"> Edit</a>
+    <a href="{% url 'traveler_delete' traveler.id %}"> DELETE</a>
+
+    <hr>
+
+{% endblock %}
